@@ -45,7 +45,6 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
         return () => {
             unsubscribe();
         }
-
     }, [])
 
     async function singInWithGoogle() {
@@ -66,13 +65,11 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
                 avatar: photoURL
             })
         }
-
     }
 
     return (
         <AuthContext.Provider value={{ user, singInWithGoogle }}>
             {props.children}
         </AuthContext.Provider>
-
     );
 }
