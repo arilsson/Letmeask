@@ -5,15 +5,14 @@ import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg';
 
 import { Button } from '../components/Button';
-import { useAuth } from '../hooks/useAuth';
 import { database } from '../services/firebase';
-
+import { useAuth } from '../hooks/useAuth';
 
 import '../styles/auth.scss';
 
 export function NewRoom() {
-    const { user } = useAuth();
-    const history = useHistory();
+    const { user } = useAuth()
+    const history = useHistory()
     const [newRoom, setNewRoom] = useState('');
 
     async function handleCreateRoom(event: FormEvent) {
@@ -31,8 +30,6 @@ export function NewRoom() {
         })
 
         history.push(`/rooms/${firebaseRoom.key}`)
-
-
     }
 
     return (
@@ -40,13 +37,13 @@ export function NewRoom() {
             <aside>
                 <img src={illustrationImg} alt="Ilustração simbolizando perguntas e respostas" />
                 <strong>Crie salas de Q&amp;A ao-vivo</strong>
-                <p>Tire suas dúvidas da sua audiência em tempo-real</p>
+                <p>Tire as dúvidas da sua audiência em tempo-real</p>
             </aside>
             <main>
                 <div className="main-content">
                     <img src={logoImg} alt="Letmeask" />
                     <h2>Criar uma nova sala</h2>
-                    <form onSubmit={handleCreateRoom} >
+                    <form onSubmit={handleCreateRoom}>
                         <input
                             type="text"
                             placeholder="Nome da sala"
