@@ -142,3 +142,35 @@
     }
   }
 }
+// Media queries
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 768px) {
+	#page-auth {
+		height: auto;
+		flex-direction: column-reverse;
+
+		main {
+			padding: 64px 32px;
+		}
+
+		aside {
+			padding: 5px 20px;
+			text-align: center;
+
+			strong {
+				font-size: 18px;
+			}
+
+			p {
+				font-size: 18px;
+			}
+
+			img {
+				align-self: center;
+
+        max-width: 60px;
+			}
+		}
+	}
+}
